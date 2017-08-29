@@ -10,6 +10,7 @@ import UIKit
 
 class HelloWorldViewController: UIViewController {
 
+    @IBOutlet weak var helloLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,6 +20,12 @@ class HelloWorldViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    @IBAction func helloTap(_ sender: Any) {
+        helloLabel.text = "Hello World!"
+    }
+    @IBAction func clearTap(_ sender: Any) {
+        helloLabel.text = ""
     }
     
 
